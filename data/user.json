@@ -1,20 +1,86 @@
 {
   "1": {
-    "name": "king arthur",
-    "password": "password1",
-    "profession": "king",
-    "id": 1
+    "name": "motion detector",
+    "device type": "mobile",
+    "device model": "moto x4",
+    "id": 1,
+    "state": {
+      "presence": true,
+      "lastUpdated": "2022-11-12T19:16:42"
+    },
+    "config": {
+      "on": true,
+      "threshold_value": "Integer^1,100",
+      "start_delay": "Integer^5,300",
+      "frame_count": "Integer^1,5",
+      "camera_number": "Integer^0,1",
+      "frame_control": "Integer^0,1",
+      "sound_control": "Integer^0,1",
+      "event_control": "Integer^0,1",
+      "load_profile": "String^profile name"
+    }
   },
   "2": {
-    "name": "rob kendal",
-    "password": "password3",
-    "profession": "code fiddler",
-    "id": 2
+    "name": "motion detector",
+    "device type": "mobile",
+    "device model": "samsung galaxy a51",
+    "id": 2,
+    "state": {
+      "presence": false,
+      "lastUpdated": "2022-11-12T19:16:42"
+    },
+    "config": {
+      "on": false,
+      "threshold_value": "Integer^1,100",
+      "start_delay": "Integer^5,300",
+      "frame_count": "Integer^1,5",
+      "camera_number": "Integer^0,1",
+      "frame_control": "Integer^0,1",
+      "sound_control": "Integer^0,1",
+      "event_control": "Integer^0,1",
+      "load_profile": "String^profile name"
+    }
   },
   "3": {
-    "name": "teresa may",
-    "password": "password2",
-    "profession": "brexit destroyer",
-    "id": 6
+    "name": "motion detector",
+    "device type": "mobile",
+    "device model": "samsung galaxy s21",
+    "id": 3,
+    "state": {
+      "presence": false,
+      "lastUpdated": "2022-11-12T19:16:42"
+    },
+    "config": {
+      "on": false,
+      "threshold_value": "Integer^1,100",
+      "start_delay": "Integer^5,300",
+      "frame_count": "Integer^1,5",
+      "camera_number": "Integer^0,1",
+      "frame_control": "Integer^0,1",
+      "sound_control": "Integer^0,1",
+      "event_control": "Integer^0,1",
+      "load_profile": "String^profile name"
+    }
+  },
+  "4": {
+    "name": "motion detector",
+    "device type": "tablet",
+    "device model": "samsung galaxy tab a7",
+    "id": 4,
+    "state": {
+      "presence": false,
+      "lastUpdated": "2022-11-12T19:16:42"
+    },
+    "config": {
+      "on": false,
+      "threshold_value": "Integer^1,100",
+      "start_delay": "Integer^5,300",
+      "frame_count": "Integer^1,5",
+      "camera_number": "Integer^0,1",
+      "frame_control": "Integer^0,1",
+      "sound_control": "Integer^0,1",
+      "event_control": "Integer^0,1",
+      "load_profile": "String^profile name"
+    }
   }
 }

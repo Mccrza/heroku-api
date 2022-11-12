@@ -1,5 +1,5 @@
-const userRoutes = (app, fs) => {
-  const dataPath = "./data/users.json";
+const sensorRoutes = (app, fs) => {
+  const dataPath = "./data/sensors.json";
 
   const readFile = (
     callback,
@@ -31,17 +31,17 @@ const userRoutes = (app, fs) => {
     });
   };
 
-  app.get("/users", (req, res) => {
+  app.get("/sensors", (req, res) => {
     readFile((data) => {
       res.send(data);
     }, true);
   });
 
-  app.post("/users", (req, res) => {
+  app.post("/sensors", (req, res) => {
     readFile((data) => {
-      const newUserId = Date.now().toString();
+      const newSensorId = Date.now().toString();
 
-      data[newUserId] = req.body;
+      data[newSensorId] = req.body;
 
       writeFile(JSON.stringify(data, null, 2), () => {
         res.status(200).send("new user added");
@@ -49,27 +49,27 @@ const userRoutes = (app, fs) => {
     }, true);
   });
 
-  app.put("/users/:id", (req, res) => {
+  app.put("/sensors/:id", (req, res) => {
     readFile((data) => {
-      const userId = req.params["id"];
-      data[userId] = req.body;
+      const sensorId = req.params["id"];
+      data[sensorId] = req.body;
 
       writeFile(JSON.stringify(data, null, 2), () => {
-        res.status(200).send(`users id:${userId} updated`);
+        res.status(200).send(`sensors id:${sensorId} updated`);
       });
     }, true);
   });
 
-  app.delete("/users/:id", (req, res) => {
+  app.delete("/sensors/:id", (req, res) => {
     readFile((data) => {
-      const userId = req.params["id"];
-      delete data[userId];
+      const sensorId = req.params["id"];
+      delete data[sensorId];
 
       writeFile(JSON.stringify(data, null, 2), () => {
-        res.status(200).send(`users id:${userId} removed`);
+        res.status(200).send(`sensors id:${sensorId} removed`);
       });
     }, true);
   });
 };
 
-module.exports = userRoutes;
+module.exports = sensorRoutes;

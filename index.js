@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const routes = require("./routes/routes.js")(app, fs);
 
-const importData = require("./data/user.json");
+const importData = require("./data/sensors.json");
 let port = process.env.PORT || 3334;
 
 app.get("/", (req, res) => {
